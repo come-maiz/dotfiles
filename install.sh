@@ -1,3 +1,3 @@
 #!/bin/bash
 
-ln -s email/offlineimap/.offlineimaprc $HOME/.offlineimaprc
+ln -s "$(dirname $0)/email/offlineimap/.offlineimaprc" "$HOME/.offlineimaprc"
