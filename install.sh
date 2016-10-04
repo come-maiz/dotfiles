@@ -5,3 +5,4 @@ dir="$(dirname $0)"
 # email
 ln -s "$dir/email/offlineimap/.offlineimaprc" "$HOME/.offlineimaprc"
 ln -s "$dir/email/msmtp/.msmtprc" "$HOME/.msmtprc"
+ln -s "$dir/email/mutt/.muttrc" "$HOME/.muttrc"

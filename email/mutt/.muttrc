@@ -1,0 +1,28 @@
+# Thanks Pat Brisbin for
+# https://pbrisbin.com/posts/mutt_gmail_offlineimap/
+
+set mbox_type   = Maildir
+set sendmail    = /usr/bin/msmtp
+
+set folder      = ~/Mail
+set spoolfile   = "+INBOX"
+set mbox        = "+[Gmail]/All Mail"
+set postponed   = "+[Gmail]/Drafts"
+unset record
+
+mailboxes +INBOX
+
+macro index D \
+  "<save-message>+[Gmail]/Trash<enter>" "move message to the trash"
+
+macro index S \
+  "<save-message>+[Gmail]/Spam<enter>" "mark message as spam"
+
+set realname    = "Leo Arias
+set from        = "leo.arias@canonical.com""
+set mail_check  = 0
+
+# sort/threading
+set sort        = threads
+set sort_aux    = reverse-last-date-received
+set sort_re

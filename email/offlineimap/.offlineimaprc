@@ -16,7 +16,6 @@ localfolders = ~/Mail/canonical
 [Repository canonical-remote]
 type = Gmail
 remoteuser = leo.arias@canonical.com
-# TODO: use gpg, keepass or vault to handle the password --elopio - 2016-10-03
 remotepass = $canonical_google_password
 realdelete = no
 maxconnections = 3
