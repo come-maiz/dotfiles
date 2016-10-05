@@ -1,17 +1,33 @@
 # Thanks Pat Brisbin for
 # https://pbrisbin.com/posts/mutt_gmail_offlineimap/
+# https://pbrisbin.com/posts/two_accounts_in_mutt/
 
 [general]
 ui = ttyui
-accounts = canonical
+accounts = personal,canonical
+
+[Account personal]
+localrepository = personal-local
+remoterepository = personal-remote
 
 [Account canonical]
 localrepository = canonical-local
 remoterepository = canonical-remote
 
+[Repository personal-local]
+type = Maildir
+localfolders = ~/Mail/personal
+
 [Repository canonical-local]
 type = Maildir
 localfolders = ~/Mail/canonical
+
+[Repository personal-remote]
+type = IMAP
+remotehost = mail.gandi.net
+remoteuser = yo@elopio.net
+remotepass = $personal_email_password
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
 [Repository canonical-remote]
 type = Gmail

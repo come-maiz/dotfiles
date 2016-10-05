@@ -1,0 +1,12 @@
+set from      = "yo@elopio.net"
+set sendmail  = "/usr/bin/msmtp -a personal"
+set mbox      = "+personal/Archive"
+set postponed = "+personal/Drafts"
+
+color status green default
+
+macro index D \
+  "<save-message>+personal/Trash<enter>" "move message to the trash"
+
+macro index S \
+  "<save-message>+personal/Spam<enter>" "mark message as spam"

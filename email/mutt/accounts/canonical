@@ -1,0 +1,12 @@
+set from      = "leo.arias@canonical.com"
+set sendmail  = "/usr/bin/msmtp -a canonical"
+set mbox      = "+canonical/All Mail"
+set postponed = "+canonical/[Gmail].Drafts"
+
+color status cyan default
+
+macro index D \
+  "<save-message>+canonical/[Gmail].Trash<enter>" "move message to the trash"
+
+macro index S \
+  "<save-message>+canonical/[Gmail].Spam" "mark message as spam"
