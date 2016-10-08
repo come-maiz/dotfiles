@@ -10,6 +10,7 @@ ln -s "$dir/email/mutt/.muttrc" "$HOME/.muttrc"
 mkdir -p "$HOME/.mutt/accounts"
 ln -s "$dir/email/mutt/accounts/personal" "$HOME/.mutt/accounts/personal"
 ln -s "$dir/email/mutt/accounts/canonical" "$HOME/.mutt/accounts/canonical"
+ln -s "$dir/email/.mailcap" "HOME/.mailcap"
 
 # editors
 ln -s "$dir/editors/emacs/.emacs.d" "$HOME/.emacs.d"

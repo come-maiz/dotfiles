@@ -1,0 +1,5 @@
+# Thanks to Steve Kemp for
+# https://debian-administration.org/article/75/Reading_HTML_email_with_Mutt
+
+text/html;                      links %s; nametemplate=%s.html
+text/html;                      links -dump %s; nametemplate=%s.html; copiousoutput
