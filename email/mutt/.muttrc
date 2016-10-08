@@ -1,8 +1,10 @@
-# Thanks Pat Brisbin for
+# Thanks to:
+# Pat Brisbin for
 # https://pbrisbin.com/posts/mutt_gmail_offlineimap/
-
-# Thanks to Steve Kemp for
+# Steve Kemp for
 # https://debian-administration.org/article/75/Reading_HTML_email_with_Mutt
+# Jason Ryan for
+# http://jasonwryan.com/blog/2012/05/12/mutt/
 
 set mbox_type   = Maildir
 
@@ -18,6 +20,7 @@ set sort_aux    = reverse-last-date-received
 set sort_re
 
 auto_view text/html
+alternative_order text/plain text/enriched text/html
 
 set spoolfile   = "+personal/INBOX"
 
