@@ -3,6 +3,8 @@ set sendmail  = "/usr/bin/msmtp -a canonical"
 set mbox      = "+canonical/All Mail"
 set postponed = "+canonical/[Gmail].Drafts"
 
+unset record
+
 color status cyan default
 
 macro index D \

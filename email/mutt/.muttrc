@@ -9,7 +9,6 @@
 set mbox_type   = Maildir
 
 set folder      = ~/Mail
-unset record
 
 set realname    = "Leo Arias
 set mail_check  = 0

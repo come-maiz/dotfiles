@@ -3,6 +3,8 @@ set sendmail  = "/usr/bin/msmtp -a personal"
 set mbox      = "+personal/Archive"
 set postponed = "+personal/Drafts"
 
+set record=+personal/Sent
+
 color status green default
 
 macro index D \
