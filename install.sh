@@ -1,16 +1,28 @@
 #!/bin/bash
+#
+# Install configuration files.
+#
+# Arguments:
+# machine: The type of machine to be installed. Either devel or comms.
+
+machine="$1"
 
 dir="$(dirname $0)"
 
-# email
-ln -s "$dir/email/offlineimap/.offlineimaprc" "$HOME/.offlineimaprc"
-ln -s "$dir/email/msmtp/.msmtprc" "$HOME/.msmtprc"
-# mutt
-ln -s "$dir/email/mutt/.muttrc" "$HOME/.muttrc"
-mkdir -p "$HOME/.mutt/accounts"
-ln -s "$dir/email/mutt/accounts/personal" "$HOME/.mutt/accounts/personal"
-ln -s "$dir/email/mutt/accounts/canonical" "$HOME/.mutt/accounts/canonical"
-ln -s "$dir/email/.mailcap" "HOME/.mailcap"
-
 # editors
-ln -s "$dir/editors/emacs/.emacs.d" "$HOME/.emacs.d"
+ln -s "${dir}/editors/emacs/.emacs.d" "${HOME}/.emacs.d"
+
+
+if [ "${machine}" == 'comms' ]; then
+
+    # email
+    ln -s "${dir}/email/offlineimap/.offlineimaprc" "${HOME}/.offlineimaprc"
+    ln -s "${dir}/email/msmtp/.msmtprc" "${HOME}/.msmtprc"
+    # mutt
+    ln -s "${dir}/email/mutt/.muttrc" "${HOME}/.muttrc"
+    mkdir -p "$HOME/.mutt/accounts"
+    ln -s "${dir}/email/mutt/accounts/personal" "${HOME}/.mutt/accounts/personal"
+    ln -s "${dir}/email/mutt/accounts/canonical" "${HOME}/.mutt/accounts/canonical"
+    ln -s "${dir}/email/.mailcap" "${HOME}/.mailcap"
+
+fi
