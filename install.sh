@@ -28,3 +28,6 @@ if [ "${machine}" == 'comms' ]; then
     mkdir -p "${HOME}/.weechat"
     ln -s "${dir}/chat/weechat/irc.conf" "${HOME}/.weechat/irc.conf"
 fi
+
+# bash
+cat "${dir}/shell/bash/.bashrc" >> "${HOME}/.bashrc"
