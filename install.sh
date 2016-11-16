@@ -24,5 +24,7 @@ if [ "${machine}" == 'comms' ]; then
     ln -s "${dir}/email/mutt/accounts/personal" "${HOME}/.mutt/accounts/personal"
     ln -s "${dir}/email/mutt/accounts/canonical" "${HOME}/.mutt/accounts/canonical"
     ln -s "${dir}/email/.mailcap" "${HOME}/.mailcap"
-
+    # weechat
+    mkdir -p "${HOME}/.weechat"
+    ln -s "${dir}/chat/weechat/irc.conf" "${HOME}/.weechat/irc.conf"
 fi
