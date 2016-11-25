@@ -14,7 +14,6 @@ ln -s "${dir}/editors/emacs/.emacs.d" "${HOME}/.emacs.d"
 
 
 if [ "${machine}" == 'comms' ]; then
-
     # email
     ln -s "${dir}/email/offlineimap/.offlineimaprc" "${HOME}/.offlineimaprc"
     ln -s "${dir}/email/msmtp/.msmtprc" "${HOME}/.msmtprc"
@@ -27,6 +26,9 @@ if [ "${machine}" == 'comms' ]; then
     # weechat
     mkdir -p "${HOME}/.weechat"
     ln -s "${dir}/chat/weechat/irc.conf" "${HOME}/.weechat/irc.conf"
+elif [ "${machine}" == 'devel' ]; then
+    # git
+    ln -s "${dir}/source_control/git/.gitconfig" "${HOME}/.gitconfig"
 fi
 
 # bash
