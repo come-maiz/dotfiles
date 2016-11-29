@@ -5,6 +5,8 @@ set postponed = "+personal/Drafts"
 
 set record=+personal/Sent
 
+save-hook . "=personal/Archive.2016"
+
 color status green default
 
 macro index D \
