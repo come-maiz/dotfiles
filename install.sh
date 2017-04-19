@@ -12,7 +12,6 @@ dir="$(dirname $0)"
 # editors
 ln -s "${dir}/editors/emacs/.emacs.d" "${HOME}/.emacs.d"
 
-
 if [ "${machine}" == 'comms' ]; then
     # email
     ln -s "${dir}/email/offlineimap/.offlineimaprc" "${HOME}/.offlineimaprc"
@@ -29,6 +28,11 @@ if [ "${machine}" == 'comms' ]; then
 elif [ "${machine}" == 'devel' ]; then
     # git
     ln -s "${dir}/source_control/git/.gitconfig" "${HOME}/.gitconfig"
+elif [ "${machine}" == 'pc' ]; then
+    # keepassxc
+    ln -s "{dir}/keepassxc/keepass.ini" "${HOME}/snap/keepassxc/current/.config/keepassxc/keepass.ini"
+    # nautilus
+    cat "{dir}/nautilus/bookmarks" >> "${HOME}/.config/gtk-3.0/bookmarks"
 fi
 
 # bash
