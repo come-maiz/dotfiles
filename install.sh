@@ -33,6 +33,8 @@ elif [ "${machine}" == 'pc' ]; then
     ln -s "{dir}/keepassxc/keepass.ini" "${HOME}/snap/keepassxc/current/.config/keepassxc/keepass.ini"
     # nautilus
     cat "{dir}/nautilus/bookmarks" >> "${HOME}/.config/gtk-3.0/bookmarks"
+    # gnome
+    dconf load /org/gnome/desktop/wm/keybindings/ < "{dir}/gnome/keybindings"
 fi
 
 # bash
