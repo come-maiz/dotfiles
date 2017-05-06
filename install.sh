@@ -21,6 +21,7 @@ if [ "${machine}" == 'comms' ]; then
     mkdir -p "$HOME/.mutt/accounts"
     ln -s "${dir}/email/mutt/accounts/personal" "${HOME}/.mutt/accounts/personal"
     ln -s "${dir}/email/mutt/accounts/canonical" "${HOME}/.mutt/accounts/canonical"
+    ln -s "${dir}/email/mutt/gpg.rc" "${HOME}/.mutt/gpg.rc"
     ln -s "${dir}/email/.mailcap" "${HOME}/.mailcap"
     # weechat
     mkdir -p "${HOME}/.weechat"
