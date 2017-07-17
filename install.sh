@@ -31,11 +31,12 @@ elif [ "${machine}" == 'devel' ]; then
     ln -s "${dir}/source_control/git/.gitconfig" "${HOME}/.gitconfig"
 elif [ "${machine}" == 'pc' ]; then
     # keepassxc
-    ln -s "{dir}/keepassxc/keepass.ini" "${HOME}/snap/keepassxc/current/.config/keepassxc/keepass.ini"
+    ln -s "${dir}/keepassxc/keepass.ini" "${HOME}/snap/keepassxc/current/.config/keepassxc/keepass.ini"
     # nautilus
-    cat "{dir}/nautilus/bookmarks" >> "${HOME}/.config/gtk-3.0/bookmarks"
+    cat "${dir}/nautilus/bookmarks" >> "${HOME}/.config/gtk-3.0/bookmarks"
     # gnome
-    dconf load /org/gnome/desktop/wm/keybindings/ < "{dir}/gnome/keybindings"
+    dconf load /org/gnome/desktop/wm/keybindings/ < "${dir}/gnome/keybindings"
+    ./${dir}/gnome/terminal_bell.sh
 fi
 
 # bash
