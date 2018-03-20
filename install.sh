@@ -10,7 +10,7 @@ machine="$1"
 dir="$(dirname $0)"
 
 # editors
-ln -s "${dir}/editors/emacs/.emacs.d" "${HOME}/.emacs.d"
+#ln -s "${dir}/editors/emacs/.emacs.d" "${HOME}/.emacs.d"
 
 if [ "${machine}" == 'comms' ]; then
     # email
@@ -20,7 +20,7 @@ if [ "${machine}" == 'comms' ]; then
     ln -s "${dir}/email/mutt/.muttrc" "${HOME}/.muttrc"
     mkdir -p "$HOME/.mutt/accounts"
     ln -s "${dir}/email/mutt/accounts/personal" "${HOME}/.mutt/accounts/personal"
-    ln -s "${dir}/email/mutt/accounts/canonical" "${HOME}/.mutt/accounts/canonical"
+    ln -s "${dir}/email/mutt/accounts/zeppelin" "${HOME}/.mutt/accounts/zeppelin"
     ln -s "${dir}/email/mutt/gpg.rc" "${HOME}/.mutt/gpg.rc"
     ln -s "${dir}/email/.mailcap" "${HOME}/.mailcap"
     # weechat

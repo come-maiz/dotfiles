@@ -4,23 +4,23 @@
 
 [general]
 ui = ttyui
-accounts = personal,canonical
+accounts = personal,zeppelin
 
 [Account personal]
 localrepository = personal-local
 remoterepository = personal-remote
 
-[Account canonical]
-localrepository = canonical-local
-remoterepository = canonical-remote
+[Account zeppelin]
+localrepository = zeppelin-local
+remoterepository = zeppelin-remote
 
 [Repository personal-local]
 type = Maildir
 localfolders = ~/Mail/personal
 
-[Repository canonical-local]
+[Repository zeppelin-local]
 type = Maildir
-localfolders = ~/Mail/canonical
+localfolders = ~/Mail/zeppelin
 
 [Repository personal-remote]
 type = IMAP
@@ -29,10 +29,10 @@ remoteuser = yo@elopio.net
 remotepass = $personal_email_password
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
-[Repository canonical-remote]
+[Repository zeppelin-remote]
 type = Gmail
-remoteuser = leo.arias@canonical.com
-remotepass = $canonical_google_password
+remoteuser = leo@zeppelin.solutions
+remotepass = $zeppelin_google_password
 realdelete = no
 maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt

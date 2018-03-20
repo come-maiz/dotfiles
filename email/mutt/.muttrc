@@ -26,6 +26,6 @@ set spoolfile   = "+personal/INBOX"
 source ~/.mutt/accounts/personal
 
 folder-hook personal/* source ~/.mutt/accounts/personal
-folder-hook canonical/* source ~/.mutt/accounts/canonical
+folder-hook zeppelin/* source ~/.mutt/accounts/zeppelin
 
 source ~/.mutt/gpg.rc
