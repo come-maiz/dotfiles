@@ -16,7 +16,7 @@
 
 (require 'package)
 (defvar package-list)
-(setq package-list '(go-mode))
+(setq package-list '(go-mode js2-mode solidity-mode))
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -31,7 +31,10 @@
     (package-install package)))
 
 (add-to-list 'auto-mode-alist '("\\.go" . go-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
+(setq js-indent-level 2)
+(require 'solidity-mode)
 
 (column-number-mode)
 
