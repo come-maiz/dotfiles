@@ -16,7 +16,7 @@
 
 (require 'package)
 (defvar package-list)
-(setq package-list '(go-mode js2-mode solidity-mode))
+(setq package-list '(go-mode js2-mode solidity-mode base16-theme))
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -39,6 +39,8 @@
 (column-number-mode)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(load-theme 'base16-onedark t)
 
 (provide 'init)
 ;;; init.el ends here
