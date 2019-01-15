@@ -16,7 +16,7 @@
 
 (require 'package)
 (defvar package-list)
-(setq package-list '(go-mode js2-mode solidity-mode base16-theme))
+(setq package-list '(go-mode js2-mode solidity-mode base16-theme rainbow-delimiters))
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
                          ("gnu" . "http://elpa.gnu.org/packages/")
                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -42,5 +42,6 @@
 
 (load-theme 'base16-onedark t)
 
+(add-hook 'prog-mode-hook #'rainbow-delimiters-mode)
+
 (provide 'init)
-;;; init.el ends here
