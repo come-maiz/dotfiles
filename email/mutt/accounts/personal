@@ -5,7 +5,7 @@ set postponed = "+personal/Drafts"
 
 set record=+personal/Sent
 
-save-hook . "=personal/Archive.2019"
+save-hook . "=personal/Archive.2020"
 
 color status green default
 
