@@ -4,35 +4,19 @@
 
 [general]
 ui = ttyui
-accounts = personal,zeppelin
+accounts = personal
 
 [Account personal]
 localrepository = personal-local
 remoterepository = personal-remote
 
-[Account zeppelin]
-localrepository = zeppelin-local
-remoterepository = zeppelin-remote
-
 [Repository personal-local]
 type = Maildir
 localfolders = ~/Mail/personal
-
-[Repository zeppelin-local]
-type = Maildir
-localfolders = ~/Mail/zeppelin
 
 [Repository personal-remote]
 type = IMAP
 remotehost = mail.gandi.net
 remoteuser = yo@elopio.net
 remotepass = $personal_email_password
-sslcacertfile = /etc/ssl/certs/ca-certificates.crt
-
-[Repository zeppelin-remote]
-type = Gmail
-remoteuser = leo@zeppelin.solutions
-remotepass = $zeppelin_google_password
-realdelete = no
-maxconnections = 3
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
